@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+{#    {{ title }}#}
+    {{ _self }}
+    {{ _charset }}
+{#    {{ author }}#}
+
+    {% for movie in movies  %}
+{#        <li>{{ movie }}</li>#}
+    {% endfor %}
+{% endblock %}
