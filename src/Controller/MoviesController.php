@@ -23,12 +23,11 @@ class MoviesController extends AbstractController
         // findAll() - SELECT * FROM movies;
         $movies = $this->repository->findAll();
 
-//        dd($movies);
-
         return $this->render('movies/index.html.twig', [
             'movies' => $movies,
         ]);
     }
+
     #[Route('/movies/{id}', name: 'app_movies_show')]
     #[ParamConverter('movie', class: Movie::class)]
     public function getMovieById(Movie $movie): Response
