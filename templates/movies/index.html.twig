@@ -1,12 +1,12 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-{#    {{ title }}#}
-    {{ _self }}
-    {{ _charset }}
-{#    {{ author }}#}
-
-    {% for movie in movies  %}
-{#        <li>{{ movie }}</li>#}
-    {% endfor %}
+    <h1>Movies</h1>
+    <ul>
+        {% for movie in movies %}
+            <li>{{ movie.title }}</li>  {# Adjust the property name to match your Movie entity #}
+        {% else %}
+            <li>No movies found.</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
