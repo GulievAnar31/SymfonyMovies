@@ -1,6 +1,7 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
+    <h1 class="bg-blue-500 text-2xl text-center font-bold">Wooohoo.</h1>
     <h1>Movies</h1>
     <ul>
         {% for movie in movies %}
@@ -9,6 +10,4 @@
             <li>No movies found.</li>
         {% endfor %}
     </ul>
-
-    <h1>Wooohoo.</h1>
 {% endblock %}
